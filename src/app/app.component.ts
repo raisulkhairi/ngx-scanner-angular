@@ -11,7 +11,6 @@ export class AppComponent {
   @ViewChild('action') scanner!: NgxScannerQrcodeComponent;
 
   contraint = {
-    audio: false,
     video: {
       facingMode: {
         exact: 'environment'
@@ -20,7 +19,7 @@ export class AppComponent {
   }
 
   ngAfterViewInit() {
-    // this.scanner.start();
+    this.scanner.start();
     this.scanner.constraints = this.contraint;
   }
 
